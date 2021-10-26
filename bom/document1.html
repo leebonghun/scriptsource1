@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <h1 id="header1"><i>Header1</i></h1>
+    <h2 id="header2">Header2</h2>
+    <script>
+      //요소(element) 찾아주기 : 요소 변화(css,attribute,text)
+      //text 변화 : innerHTML : 태그가 들어가있으면 그것도 콘솔에 출력, innerText : text만 출력
+      let demo = document.getElementById("demo");
+      console.log(demo.innerHTML); //<p id="demo"></p>
+      console.log(demo.innerText); //<p id="demo"></p>
+
+      let header1 = document.getElementById("header1");
+      console.log(header1.innerHTML);
+      console.log(header1.innerText);
+
+      //   header1.innerHTML = "<i>Change</i>";
+      header1.innerText = "<i>Change</i>";
+
+      let header2 = document.getElementById("header2");
+      console.log(header2.innerHTML);
+      console.log(header2.innerText);
+    </script>
+  </body>
+</html>
