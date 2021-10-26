@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let numArr = [52, 273, 586, 32, 57, 103, 312, 2];
+      let max = 0;
+      let max1 = 999;
+      for (var num of numArr) {
+        if (num > max) {
+          max = num;
+        } else if (num < max1) {
+          max1 = num;
+        }
+      }
+      document.write("최댓값 :" + max + " <br>  ");
+      document.write("최솟값 :" + max1);
+    </script>
+  </body>
+</html>
