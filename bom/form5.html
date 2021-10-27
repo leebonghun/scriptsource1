@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div * {
+        padding: 10px;
+        margin: 10px;
+      }
+      [readonly] {
+        background-color: aliceblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>숫자 맞추기 게임</h3>
+    <p>
+      이 게임은 컴퓨터가 생성한 숫자를 맞추는 게임입니다.<br />
+      숫자는 1부터 100사이에 있습니다.
+    </p>
+    <div>
+      <label for="num1">숫자</label>
+      <input type="text" id="num1" name="sum1" size="5" />
+      <button type="button" onclick="num100()">확인</button>
+    </div>
+    <div>
+      <label for="count">추측횟수</label>
+      <input type="text" id="count" name="count" size="5" readonly />
+    </div>
+    <div>
+      <label for="hint">힌트</label>
+      <input type="text" id="hint" name="hint" size="20" readonly />
+    </div>
+    <script>
+      const computer = Math.floor(Math.random() * 46 + 1);
+      let nGuess = 0;
+
+      function num100() {
+        let num = document.querySelector("#num1").value;
+        nGuess++;
+        document.querySelector("#count").value = nGuess;
+        let result = "";
+        if (num > computer) {
+          result = "추측값이 큽니다";
+        } else if (num == computer) {
+          result = "정답입니다";
+        } else if (num < computer) {
+          result = "추측값이 작습니다";
+        }
+        document.querySelector("#hint").value = result;
+      }
+    </script>
+  </body>
+</html>

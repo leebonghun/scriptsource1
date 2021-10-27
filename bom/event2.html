@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- onchange : 내용을 변경후 다른 요소가 FOCUS를 받을 때 발생 ! 
+        onblur :  내용 수정 여부와 상관없이 focus 가 다른 요소로 이동하면 발생-->
+    <form action="">
+      <div>
+        <label for="userid">아이디</label>
+        <input type="text" id="userid" name="userid" onchange="lower(this)" />
+      </div>
+      <div>
+        <label for="username">이름</label>
+        <input type="text" id="username" name="username" onblur="lower(this)" />
+      </div>
+      <button type="button" onclick="process()">전송</button>
+    </form>
+    <script>
+      function lower(obj) {
+        // 소문자로 변경한 후 보여주기
+        obj.value = obj.value.toLowerCase();
+        alert("경고");
+      }
+    </script>
+  </body>
+</html>
