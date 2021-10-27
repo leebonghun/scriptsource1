@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="header" class="header" onclick="change()">Header1</h1>
+    <script>
+      function change() {
+        //h1 태그의 style을 동적으로 변경
+        //글자색 blue, 테두리 빨간색 선
+        //안쪽 여백 10px
+
+        let h1 = document.querySelector("#header");
+        h1.style.color = "blue";
+        h1.style.border = "1px solid red";
+        h1.style.padding = "10px";
+        h1.style.fontSize = "30px"; //뒤에를 대문자롱 올려줘야함 ex) font'S'ize << 이방식
+        // font 계열
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img id="imgid" src="paper.png" alt="보자기" />
+    <button type="button" onclick="changeImage()">이미지 변경</button>
+    <script>
+      //버튼 클릭시 이미지 변경
+      function changeImage() {
+        let img1 = document.getElementById("imgid");
+        img1.setAttribute("src", "scissor.png"); // img.src = "paper.png"; //이미지 파일 경로
+        img1.setAttribute("alt", "가위"); // img.alt = "보자기"; //설명
+        document.body.appendChild(img1);
+      }
+    </script>
+  </body>
+</html>

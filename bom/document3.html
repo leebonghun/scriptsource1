@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- name : global 속성 아무태그나 다 붙일 수 있다. -->
+    <ul name="list">
+      <li>List item1</li>
+      <li>List item2</li>
+      <li>List item3</li>
+      <li>List item4</li>
+      <li>List item5</li>
+    </ul>
+    <script>
+      //NodeList()  forEach 사용가능
+      let list = document.getElementsByName("list");
+      // 노드의 속성 변경이 실시간으로 반영 안됨
+      console.log(list);
+
+      list.forEach((element) => {
+        console.log(element.innerText);
+      });
+
+      //HTMLCollection : forEach 사용불가
+      let list1 = document.getElementsByTagName("ul");
+      console.log(list1);
+    </script>
+  </body>
+</html>
