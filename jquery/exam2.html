@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>The Light Bulb</h1>
+    <button type="button" id="button1" ">
+      Turn on the light
+    </button>
+    <img id="imgid" src="../bom/pic_bulboff.gif" alt="" />
+    <button type="button" id="button2" >
+      Turn off the light
+    </button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(function () {
+        const img1 = $("img");
+        //위에 전역변수처럼 선언해줘도됨
+
+        $("#button1").click(function () {
+          img1.attr("src", "../bom/pic_bulbon.gif");
+        });
+        $("#button2").click(function () {
+          img1.attr("src", "../bom/pic_bulboff.gif");
+        });
+      });
+      //버튼 클릭시 이미지 변경
+    </script>
+  </body>
+</html>
