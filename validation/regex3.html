@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Lorem Ipsum, dolor sit amet consectetur adipisicing elit. Non, voluptatum
+      delectus illo possimus odit eos, eveniet nisi voluptates voluptatem cum
+      sapiente dignissimos error qui voluptate consequatur id? Perferendis,
+      numquam iure. <br />
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, voluptatum
+      delectus illo possimus odit eos, eveniet nisi voluptates voluptatem cum
+      sapiente dignissimos error qui voluptate consequatur id? Perferendis,
+      numquam iure. <br />
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, voluptatum
+      delectus illo possimus odit eos, eveniet nisi voluptates voluptatem cum
+      sapiente dignissimos error qui voluptate consequatur id? Perferendis,
+      numquam iure.
+    </p>
+    <script>
+      let p1 = document.querySelector("p").innerText;
+      console.log("g 플래그 사용");
+      console.log(p1.match(/ipsum/g)); //g는 모든문단에 있는 단어 다 찾아줌 / i는 대소문자 구별안하고 같은 단어를 찾아준다
+      console.log(/ipsum/g.test(p1)); //g는 모든문단에 있는 단어 다 찾아줌 / i는 대소문자 구별안하고 같은 단어를 찾아준다
+      console.log("");
+
+      console.log("gi 플래그 사용");
+      console.log(p1.match(/ipsum/gi));
+      console.log(/ipsum/gi.test(p1)); //g는 모든문단에 있는 단어 다 찾아줌 / i는 대소문자 구별안하고 같은 단어를 찾아준다
+      console.log("");
+
+      console.log("gm 플래그 사용");
+      console.log(p1.match(/$/)); //g는 모든문단에 있는 단어 다 찾아줌 / i는 대소문자 구별안하고 같은 단어를 찾아준다
+    </script>
+  </body>
+</html>
