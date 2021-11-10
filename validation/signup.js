@@ -3,6 +3,11 @@ $(function () {
     //검증 규칙 명시 - rules에 추가
     //규칙을 적용할 요소는 이름 사용
     rules: {
+      userid: {
+        required: true,
+        validId: true,
+      },
+
       username: {
         required: true,
         minlength: 2,
@@ -31,6 +36,10 @@ $(function () {
     },
     //검증 규칙과 맞지 않는 경우 보여줄 메세지 작성
     messages: {
+      userid: {
+        required: "아이디는 필수요소 입니다.",
+        validId: "true",
+      },
       username: {
         required: "이름은 필수요소 입니다.",
         minlength: "이름은 최소 두자리 여야 합니다",
@@ -65,3 +74,13 @@ $(function () {
     }
   });
 });
+
+//사용자만의 규칙 정의
+$.validator.addMethod(
+  "validId",
+  function (value) {
+    let regId = /^(?=.*[A-Za-z])(?=.*[\d])[A-Za-z\d]{6,12}$/;
+    return regId.test(value); // true or false
+  },
+  "아이디는 영대소문자,숫자의 조합으로 6~12자리로 만들어야합니다"
+);
